@@ -80,13 +80,13 @@ questions = ["""
 
 true_answers = ["1", "2", "1", "3", "3", "1", "2", "3", "3", "2"]
 your_answers = []
-
-for question in questions:
-    answer = input(question)
-    your_answers.append(answer)
-
 score = 0
 for index in range(10):
+    answer = input(questions[index])
+    your_answers.append(answer)
+
+
+
     if true_answers[index] == your_answers[index]:
         score += 1
     else:
@@ -100,6 +100,3 @@ elif score >=3 and score <7:
     print("Вам дали 300.000 Рублей")
 else:
     print("вам дали нул рублей")
-
-
-    
